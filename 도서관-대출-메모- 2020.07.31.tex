@@ -1,0 +1,838 @@
+%	-------------------------------------------------------------------------------
+%
+%			작성		
+%				2020년 
+%				7월 
+%				31일 
+%				금
+%				
+%
+%
+%
+%
+%
+%	-------------------------------------------------------------------------------
+
+%	\documentclass[10pt,xcolor=pdftex,dvipsnames,table]{beamer}
+%	\documentclass[10pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[14pt,blue,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+	\documentclass[aspectratio=1610,14pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=169,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=149,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=54,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=43,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+%	\documentclass[aspectratio=32,17pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+
+		% Font Size
+		%	default font size : 11 pt
+		%	8,9,10,11,12,14,17,20
+		%
+		% 	put frame titles 
+		% 		1) 	slideatop
+		%		2) 	slide centered
+		%
+		%	navigation bar
+		% 		1)	compress
+		%		2)	uncompressed
+		%
+		%	Color
+		%		1) blue
+		%		2) red
+		%		3) brown
+		%		4) black and white	
+		%
+		%	Output
+		%		1)  	[default]	
+		%		2)	[handout]		for PDF handouts
+		%		3) 	[trans]		for PDF transparency
+		%		4)	[notes=hide/show/only]
+
+		%	Text and Math Font
+		% 		1)	[sans]
+		% 		2)	[sefif]
+		%		3) 	[mathsans]
+		%		4)	[mathserif]
+
+
+		%	---------------------------------------------------------	
+		%	슬라이드 크기 설정 ( 128mm X 96mm )
+		%	---------------------------------------------------------	
+%			\setbeamersize{text margin left=2mm}
+%			\setbeamersize{text margin right=2mm}
+
+	%	========================================================== 	Package
+		\usepackage{kotex}						% 한글 사용
+		\usepackage{amssymb,amsfonts,amsmath}	% 수학 수식 사용
+		\usepackage{color}					%
+		\usepackage{colortbl}					%
+
+
+	%		========================================================= 	note 옵션인 
+	%			\setbeameroption{show only notes}
+		
+
+	%		========================================================= 	Theme
+
+		%	---------------------------------------------------------	
+		%	전체 테마
+		%	---------------------------------------------------------	
+		%	테마 명명의 관례 : 도시 이름
+%			\usetheme{default}			%
+%			\usetheme{Madrid}    		%
+%			\usetheme{CambridgeUS}    	% -red, no navigation bar
+%			\usetheme{Antibes}			% -blueish, tree-like navigation bar
+
+		%	----------------- table of contents in sidebar
+			\usetheme{Berkeley}		% -blueish, table of contents in sidebar
+									% 개인적으로 마음에 듬
+
+%			\usetheme{Marburg}			% - sidebar on the right
+%			\usetheme{Hannover}		% 왼쪽에 마크
+%			\usetheme{Berlin}			% - navigation bar in the headline
+%			\usetheme{Szeged}			% - navigation bar in the headline, horizontal lines
+%			\usetheme{Malmoe}			% - section/subsection in the headline
+
+%			\usetheme{Singapore}
+%			\usetheme{Amsterdam}
+
+		%	---------------------------------------------------------	
+		%	색 테마
+		%	---------------------------------------------------------	
+%			\usecolortheme{albatross}	% 바탕 파란
+%			\usecolortheme{crane}		% 바탕 흰색
+%			\usecolortheme{beetle}		% 바탕 회색
+%			\usecolortheme{dove}		% 전체적으로 흰색
+%			\usecolortheme{fly}		% 전체적으로 회색
+%			\usecolortheme{seagull}	% 휜색
+%			\usecolortheme{wolverine}	& 제목이 노란색
+%			\usecolortheme{beaver}
+
+		%	---------------------------------------------------------	
+		%	Inner Color Theme 			내부 색 테마 ( 블록의 색 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{rose}		% 흰색
+%			\usecolortheme{lily}		% 색 안 칠한다
+%			\usecolortheme{orchid} 	% 진하게
+
+		%	---------------------------------------------------------	
+		%	Outter Color Theme 		외부 색 테마 ( 머리말, 고리말, 사이드바 )
+		%	---------------------------------------------------------	
+
+%			\usecolortheme{whale}		% 진하다
+%			\usecolortheme{dolphin}	% 중간
+%			\usecolortheme{seahorse}	% 연하다
+
+		%	---------------------------------------------------------	
+		%	Font Theme 				폰트 테마
+		%	---------------------------------------------------------	
+%			\usfonttheme{default}		
+			\usefonttheme{serif}			
+%			\usefonttheme{structurebold}			
+%			\usefonttheme{structureitalicserif}			
+%			\usefonttheme{structuresmallcapsserif}			
+
+
+
+		%	---------------------------------------------------------	
+		%	Inner Theme 				
+		%	---------------------------------------------------------	
+
+%			\useinnertheme{default}
+			\useinnertheme{circles}		% 원문자			
+%			\useinnertheme{rectangles}		% 사각문자			
+%			\useinnertheme{rounded}			% 깨어짐
+%			\useinnertheme{inmargin}			
+
+
+
+
+		%	---------------------------------------------------------	
+		%	이동 단추 삭제
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{navigation symbols}{}
+
+		%	---------------------------------------------------------	
+		%	문서 정보 표시 꼬리말 적용
+		%	---------------------------------------------------------	
+%			\useoutertheme{infolines}
+
+
+			
+	%	---------------------------------------------------------- 	배경이미지 지정
+%			\pgfdeclareimage[width=\paperwidth,height=\paperheight]{bgimage}{./fig/Chrysanthemum.jpg}
+%			\setbeamertemplate{background canvas}{\pgfuseimage{bgimage}}
+
+		%	---------------------------------------------------------	
+		% 	본문 글꼴색 지정
+		%	---------------------------------------------------------	
+%			\setbeamercolor{normal text}{fg=purple}
+%			\setbeamercolor{normal text}{fg=red!80}	% 숫자는 투명도 표시
+
+
+		%	---------------------------------------------------------	
+		%	itemize 모양 설정
+		%	---------------------------------------------------------	
+%			\setbeamertemplate{items}[ball]
+%			\setbeamertemplate{items}[circle]
+%			\setbeamertemplate{items}[rectangle]
+
+
+
+
+
+
+		\setbeamercovered{dynamic}
+
+
+
+
+
+		% --------------------------------- 	문서 기본 사항 설정
+		\setcounter{secnumdepth}{3} 		% 문단 번호 깊이
+		\setcounter{tocdepth}{3} 			% 문단 번호 깊이
+
+
+
+
+% ------------------------------------------------------------------------------
+% Begin document (Content goes below)
+% ------------------------------------------------------------------------------
+	\begin{document}
+	
+
+			\title{ 도서관 대출 }
+			\author{ 김대희 }
+			\date{ 2020년 
+					07월 
+					31일 
+					금요일   }
+
+
+% -----------------------------------------------------------------------------
+%		개정 내용
+% -----------------------------------------------------------------------------
+%
+%		2020년 6월 28일 첫제작
+%
+%
+%
+
+
+	%	==========================================================
+	%
+	%	----------------------------------------------------------
+		\begin{frame}[plain]
+		\titlepage
+		\end{frame}
+
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+
+%				\item [제목] 
+%				\item [지은이]
+%				\item [출판사]
+%				\item [출판일]
+%				\item [중앙]
+%				\item [수정]
+%				\item [구덕]
+%				\item [남구]
+
+
+	%	========================================================== 불화
+		\part{ 불화 }
+		\frame{\partpage}
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+		
+
+	%	---------------------------------------------------------- 명화에서 길을 찾다 
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 명화에서 길을 찾다 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 명화에서 길을 찾다 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	명화에서 길을 찾다 : 매혹적인 우리 불화 속 지혜
+				\item [지은이]	강소연
+				\item [출판사]	시공아트	
+				\item [출판일]	2019
+
+				\item [도서관]	부전 분포 반송 수정 영도 수영 연제 부민 시민 구덕 사하 연산 남구 다대 금곡 정관 구포 서동 중앙 강서 해운대 해운대인문
+
+				\item [중앙]		654.22-23
+				\item [수정]		652.22-12
+				\item [구덕]		654.22
+				\item [남구]		654.22-강55명 
+			\end{itemize}
+			\end{block}						
+
+		\end{frame}						
+		
+
+
+	%	---------------------------------------------------------- 그림으로 보는 불교 이야기 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 그림으로 보는 불교 이야기 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 그림으로 보는 불교 이야기 }
+			\setlength{\leftmargini}{5em}			
+			\begin{itemize}
+				\item [제목]  	그림으로 보는 불교 이야기 
+				\item [지은이]	정병삼
+				\item [출판사]	풀빛
+				\item [출판일]	2000
+
+				\item [도서관]	시민 서동 남구 해운대 반송 중앙 강서 부전 금정 기장 
+
+				\item [중앙]		220.4-10 서고
+				\item [남구]		224.4-정44불
+				\item [금정]		654.22-정44그
+			\end{itemize}
+			\end{block}			
+
+								
+		\end{frame}						
+			
+
+
+	%	---------------------------------------------------------- (재미있는) 우리 사찰의 벽화이야기 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ (재미있는) 우리 사찰의 벽화이야기 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { (재미있는) 우리 사찰의 벽화이야기 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	(재미있는) 우리 사찰의 벽화이야기 
+				\item [지은이]	권영한 
+				\item [출판사]	전원문화사 
+				\item [출판일]	2011
+
+				\item [도서관]		금곡 금정 
+
+				\item [중앙]		220.4-10 서고
+				\item [금정] 	654.22-권64우
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- (10대와 통하는) 사찰 벽화 이야기 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ (10대와 통하는) 사찰 벽화 이야기 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { (10대와 통하는) 사찰 벽화 이야기 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	(10대와 통하는) 사찰 벽화 이야기 : 눈으로 보고 마음으로 읽는 16가지 불교 철학
+				\item [지은이]	강호진 ; 돌 스튜디오 그림
+				\item [출판사]	철수와영희
+				\item [출판일]	2014
+
+				\item [도서관]		북구디지털 화명 연제 온고지신 동래읍성 분포 금곡 대라 망미 사하 동구 강서 다대 정관 우동 기장 반송 명장 영도 사상 해운대 남구 부전 구포 시민 
+
+				\item [중앙]		220-56
+				\item [수정]		220-20
+				\item [남구] 	청소년 080-십23철-14
+				\item [금정] 	220-강95사
+				\item [읍성] 	080-6-14
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 사찰불화 명작강의 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 사찰불화 명작강의 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 사찰불화 명작강의 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	사찰불화 명작강의 
+				\item [지은이]	강소연 
+				\item [출판사]	불광출판사 
+				\item [출판일]	2016 
+
+				\item [도서관]	중앙 수정 북구디지털 시민 연산 해운대 금정 	
+				\item [중앙]		654.22-21
+				\item [수정]		654.22 10
+				\item [금정] 	654.22-강55사 
+
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 왕실 권력 그리고 불화 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 왕실 권력 그리고 불화 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 왕실 권력 그리고 불화 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	왕실 권력 그리고 불화  : 고려ㅑ와 조선의 왕실 불화
+				\item [지은이]	김정희 
+				\item [출판사]	세창출판사 
+				\item [출판일]	2019
+
+				\item [도서관]	구포 중앙 해운대 시민 우동 금곡 수정 북구디지털	
+				\item [중앙]		654.22-24
+				\item [수정]		654.22 13
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+		
+
+	%	========================================================== 아두이노
+		\part{ 아두이노 }
+		\frame{\partpage}
+		
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+		
+
+
+
+
+
+	%	---------------------------------------------------------- 손에 잡히는 아두이노}
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 손에 잡히는 아두이노}
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 손에 잡히는 아두이노}
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	손에 잡히는 아두이노
+				\item [지은이]	마시모 밴지 지음 ; 이호민 옮김
+				\item [출판사]	인사이트
+				\item [출판일]	2010
+
+				\item [도서관] 	시민 부전 구포 반송 해운대
+				\item [중앙]		569-24
+				\item [남구]		569-밴78
+			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+	%	---------------------------------------------------------- 두근두근 아두이노 공작소 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 두근두근 아두이노 공작소 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 두근두근 아두이노 공작소 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	두근두근 아두이노 공작소 
+				\item [지은이]	마크 게디스 지음 ; 이하영 옮김
+				\item [출판사]	인사이트
+				\item [출판일]	2017
+
+				\item [도서관] 	명장 서동 사하 구포 해운대 부전 시민
+				\item [중앙]		569-34
+				\item [수정]		569-17
+				\item [구덕]		559.962-30
+				\item [남구]		566.37-마877
+  			\end{itemize}
+			\end{block}						
+								
+		\end{frame}						
+
+
+	%	========================================================== 공필화
+		\part{ 공필화 }
+		\frame{\partpage}
+		
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+
+	%	---------------------------------------------------------- 공필화 입문 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 공필화 입문 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 공필화 입문 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	공필화 입문 
+				\item [지은이]	리강
+				\item [출판사]	평사리 
+				\item [출판일]	2018
+				\item [남구]		653.12-리12공-1-7 
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 공필화 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 공필화  }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 공필화  }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	공필화  
+				\item [지은이]	김다예
+				\item [출판사]	디다아트 
+				\item [출판일]	2016
+				\item [강서] 	652.59-김22	
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+
+
+
+	%	========================================================== 불경
+		\part{ 불경 }
+		\frame{\partpage}
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+
+	%	---------------------------------------------------------- 한권으로 읽는 아함경 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 한권으로 읽는 아함경 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 한권으로 읽는 아함경 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	한권으로 읽는 아함경 
+				\item [지은이]	홍사성 엮음
+				\item [출판사]	불교시대사
+				\item [출판일]	2009
+
+				\item [도서관] 	망미 다대 반여 연산 해운대 구포 시민 
+				\item [부전]		223.51-15
+				\item [남구]		223.51-홍52아
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 아함경 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 아함경 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 아함경 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	아함경 
+				\item [지은이]	마스타니 후미오 지음 ; 이원섭 옮김
+				\item [출판사]	현암사
+				\item [출판일]	2001
+
+				\item [도서관] 	시민 중앙 금정 강서 기장 다대 화명
+				\item [중앙]		220.8-2-4
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 한권으로 읽는 빠알리 경전 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 한권으로 읽는 빠알리 경전 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 한권으로 읽는 빠알리 경전 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	한권으로 읽는 빠알리 경전 
+				\item [지은이]	일라 역편
+				\item [출판사]	민족사
+				\item [출판일]	2008
+
+				\item [도서관]		시민 반송 서동 우동 남구 해뜩 구포 부전 연산 명장 기장 해운대 사하 중앙 금정 정관
+				\item [중앙]		223.579-4
+				\item [남구]		223.1-일62빠
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- (한 권으로 읽는) 화엄경 : 80권 40품 전체 내용 요약 풀이 (만화) }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 화엄경 : 80권 40품 전체 내용 요약 풀이 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 화엄경 : 80권 40품 전체 내용 요약 풀이 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	(한 권으로 읽는) 화엄경 : 80권 40품 전체 내용 요약 풀이 (만화) 
+				\item [지은이]	임기준 글.감수 ; 조성연 구성.그림
+				\item [출판사]	누멘
+				\item [출판일]	2009
+				\item [도서관]		구포 수정 마하골 부전 중앙 시민 해운대
+				\item [중앙]		223.55-19
+				\item [수정]		233.55-5
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	========================================================== 불교
+		\part{ 불교 }
+		\frame{\partpage}
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+
+	%	---------------------------------------------------------- 불교의 수인과 진언 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 불교의 수인과 진언 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 불교의 수인과 진언 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	불교의 수인과 진언 
+				\item [지은이]	비로영우
+				\item [출판사]	하남출판사
+				\item [출판일]	2006
+				\item [도서관] 	구포 영도 구포 기장 시민
+				\item [중앙]		224.8-24 서고
+				\item [남구]		224.8-비295
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+	%	---------------------------------------------------------- 붓다의 가르침과 팔정도 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 붓다의 가르침과 팔정도 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 붓다의 가르침과 팔정도 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	붓다의 가르침과 팔정도 
+				\item [지은이]	월풀라 라훌라 원저 ; 전재성 역저
+				\item [출판사]	한국빠알리성전협회 
+				\item [출판일]	2002
+				\item [도서관]		구포 중앙 부전 연제 시민
+				\item [중앙]		221-21
+				\item [부전]		221-50
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 행복과 평화를 주는 가르침 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 행복과 평화를 주는 가르침 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 행복과 평화를 주는 가르침 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	(바알리 경전에서 선별한) 행복과 평화를 주는 가르침 
+				\item [지은이]	일아 옭김
+				\item [출판사]	민족사
+				\item [출판일]	2009
+				\item [도서관]	시민 사하 명장 구포 서동 해운대 반송 우동 
+				\item [시민]		233-85
+				\item [해운대]	223.1-3
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 반야참회 내가 원하는 것을 이루게 하는 힘 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 반야참회 내가 원하는 것을 이루게 하는 힘 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 반야참회 내가 원하는 것을 이루게 하는 힘 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	반야참회 내가 원하는 것을 이루게 하는 힘 
+				\item [지은이]	해룡
+				\item [출판사]	불광출판사
+				\item [출판일]	2012
+				\item [도서관]	구포 서동 우동 반여 망미 노을나루길 반송 연산 명장 북구디지털 해운대 부전 중앙 강서 기장 정관
+				\item [중앙]		224.81-114
+				\item [초읍]		224.81-123
+				\item [부전]		224.81-92 서고
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+
+	%	========================================================== 불교 선
+		\part{ 불교 선 }
+		\frame{\partpage}
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+
+	%	---------------------------------------------------------- 이것이 간화선이다 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 이것이 간화선이다 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 이것이 간화선이다 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	이것이 간화선이다 
+				\item [지은이]	대햬종고 원저 ; 여천무비 역해
+				\item [출판사]	민족사
+				\item [출판일]	2013
+				\item [도서관]	구포 중앙 해운대 시민 남구 수정 다대
+				\item [중앙]		225.74-4
+				\item [수정]		225.74-2
+				\item [남구]		225.74공892
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 돌계집이 애를 낳는 구나 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 돌계집이 애를 낳는 구나 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 돌계집이 애를 낳는 구나 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	돌계집이 애를 낳는 구나 : 제불조사의 선시 , 깨달음의 노래
+				\item [지은이]	이계묵
+				\item [출판사]	비움과 소통
+				\item [출판일]	2014
+				\item [부전]		224.2-297
+				\item [구포]		224.2-132
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	========================================================== 불교 찬불가
+		\part{ 불교 찬불가 }
+		\frame{\partpage}
+
+		\begin{frame} [plain]{목차}
+		\tableofcontents%
+		\end{frame}
+
+
+	%	---------------------------------------------------------- 뭇소리 찬불가 찬불가 악보집 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 뭇소리 찬불가 찬불가 악보집 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 뭇소리 찬불가 찬불가 악보집 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	뭇소리 찬물가 찬불가 악보집 
+				\item [지은이]	박범훈
+				\item [출판사]	민속원
+				\item [출판일]	2014
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+
+	%	---------------------------------------------------------- 통일 법요집 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 통일 법요집 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 통일 법요집 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	통일 법요집
+				\item [지은이]	대한불교진흥원통일법요집편찬위원회 
+				\item [출판사]	대원정사
+				\item [출판일]	1988
+				\item [시민]		227.1-2	
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+	%	---------------------------------------------------------- 어린이 법요 찬불가집 }
+	%		Frame
+	%	----------------------------------------------------------
+		\section{ 어린이 법요 찬불가집 }
+		\begin{frame} [t,plain]
+		\frametitle{}
+			\begin{block} { 어린이 법요 찬불가집 }
+			\setlength{\leftmargini}{4em}			
+			\begin{itemize}
+				\item [제목]  	어린이 법요 찬불가집 
+				\item [지은이]	법요집 편찬위원회 편저
+				\item [출판사]	우리출판사
+				\item [출판일]	2002
+				\item [시민]		227.1-4	
+			\end{itemize}
+			\end{block}						
+		\end{frame}						
+
+
+
+% ------------------------------------------------------------------------------
+% End document
+% ------------------------------------------------------------------------------
+
+
+
+
+
+\end{document}
+
+
